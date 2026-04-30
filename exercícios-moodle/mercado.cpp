@@ -9,7 +9,7 @@ int main(){
     list<int> venda;
     list<int>::iterator p;
 
-    int N = 0, op = 0, codigo = 0, ref = 0;
+    int N = 0, op = 0, codigo = 0;
 
 
     cin >> N;
@@ -20,14 +20,12 @@ int main(){
         if(op == 1){
             cin >> codigo;
             estoque.push_back(codigo);
-            ref++;
         }
         else{
             if (!estoque.empty()) {
                 int topo = estoque.front();
                 estoque.pop_front();        
-                venda.push_front(topo);     
-                ref--;
+                venda.push_front(topo);
             }
         }
     }
